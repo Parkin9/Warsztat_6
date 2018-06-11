@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: parkin9
@@ -14,11 +15,11 @@
 <body>
 
     <p>
-        <a href="/">Strona główna</a>
+        <a href="<c:url value="/"/>">Strona główna</a>
     </p>
     <hr>
 
-    <%--@elvariable id="tweet" type="pl.coderslab.model.Tweet"--%>
+    <%--@elvariable id="tweetList" type="pl.coderslab.model.Tweet"--%>
     <form:form modelAttribute="tweetList">
 
         <label for="text">Tweet: </label>

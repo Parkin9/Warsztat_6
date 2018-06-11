@@ -19,10 +19,14 @@ import javax.validation.Valid;
 @RequestMapping("/tweet")
 public class TweetController {
 
+    private final TweetRepository tweetRepository;
+    private final UserRepository userRepository;
+
     @Autowired
-    private TweetRepository tweetRepository;
-    @Autowired
-    private UserRepository userRepository;
+    public TweetController(TweetRepository tweetRepository, UserRepository userRepository) {
+        this.tweetRepository = tweetRepository;
+        this.userRepository = userRepository;
+    }
 
     @GetMapping("/create")
     public String createTweet(Model model, HttpSession sess) {

@@ -15,14 +15,15 @@
 
     <p>
         <h1>Strona główna</h1>
+        <%--@elvariable id="helloUsername" type="pl.coderslab.model.User"--%>
         <c:out value="Witaj ${helloUsername}!" default="Witaj!"/>
         <hr>
     </p>
 
     <ul>
-        <li><a href="/user/registration">Rejestracja</a></li>
-        <li><a href="/user/login">Logowanie</a></li>
-        <li><a href="/tweet/create">Tweet</a></li>
+        <li><a href=user/registration">">Rejestracja</a></li>
+        <li><a href="<c:url value="user/login"/>">Logowanie</a></li>
+        <li><a href="/tweet/create">Tweetuj</a></li>
         <li><a href="/tweet/create">Pokaż wszystkie Tweety</a></li>
         <hr>
         <li><a href="/user/logout">Wyloguj</a></li>
